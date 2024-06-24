@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .marks-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .marks-table th, .marks-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .marks-table th {
+            background-color: #f0f0f0;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">CBSE MARK SHEET</h2>
+                <hr>
+                <div class="row mx-auto">
+                    <div class="col-md-6">
+                        
+                        <p><strong>Name:</strong> {{details.name }}</p>
+                        <p><strong>Roll Number:</strong> {{details.rollno}}</p>
+                        <p><strong>Class:</strong> XII</p>
+                    </div>
+                    <div class="col-md-6">
+                        
+                        <p><strong>Exam Name:</strong> Annual Exam 2024</p>
+                        <p><strong>Result:</strong> {{result}}</p>
+                        <p><strong>Percentage:</strong> {{per}}</p>
+                    </div>
+                </div>
+                <hr>
+                <table class="marks-table">
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks Obtained</th>
+                        <th>Total Marks</th>
+                    </tr>
+                    <tr>
+                        <td>{{details.sub1 }}</td>
+                        <td>{{details.mark1 }}</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>{{details.sub2 }}</td>
+                        <td>{{details.mark2 }}</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>{{details.sub3 }}</td>
+                        <td>{{details.mark3 }}</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>{{details.sub4 }}</td>
+                        <td>{{details.mark4 }}</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>{{details.sub5 }}</td>
+                        <td>{{details.mark5 }}</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>{{details.sub6 }}</td>
+                        <td>{{details.mark6 }}</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td><b>{{total}}</b></td>
+                        <td><b>600<b></td>
+                    </tr>
+                </table>
+                <hr>
+                <p class="text-center">Note: The grades are based on the marks obtained.</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-2">
+        <button onclick="window.print()" class="btn btn-success ">Print this page</button>
+   </div>
+</body>
+</html>
